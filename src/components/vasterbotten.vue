@@ -4,9 +4,9 @@ import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";
 import geoData from "../assets/vasterbotten.json";
 
-const initialMap = ref(null);
+const initialMap = ref<L.Map | null>(null);
 
-const addMarkers = (map, data) => {
+const addMarkers = (map: L.Map, data: any) => {
   Object.keys(data).forEach((key) => {
     const item = data[key];
     if (item.coordinates.length === 2) {

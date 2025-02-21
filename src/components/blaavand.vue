@@ -5,9 +5,9 @@ import * as L from "leaflet";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import "leaflet.markercluster";
-import geyData from "../assets/blaavand.json";
+import geoData from "../assets/blaavand.json";
 
-const initialMap = ref(null);
+const initialMap = ref<L.Map | null>(null);
 
 onMounted(() => {
   initialMap.value = L.map("blavand-map").setView([55.55781, 8.25], 11);
@@ -19,14 +19,18 @@ onMounted(() => {
   }).addTo(initialMap.value);
 
   // Add Godby circle
-  const lighthouse = L.circle(geyData.lighthouse.coordinates, {
+  const lighthouse = L.circle(geoData.lighthouse.coordinates, {
     color: "black",
     fillColor: "black",
     fillOpacity: 0.5,
-    radius: geyData.lighthouse.radius,
+    radius: geoData.lighthouse.radius,
   }).addTo(initialMap.value);
-  lighthouse.bindPopup(geyData.lighthouse.popup);
+  lighthouse.bindPopup(geoData.lighthouse.popup);
 });
 </script>
-<template><div class="map" id="blavand-map"></div></template>
+
+<template>
+  <div class="map" id="blavand-map"></div>
+</template>
+
 <style lang="css" scoped></style>

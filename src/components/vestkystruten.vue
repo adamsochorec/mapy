@@ -4,8 +4,9 @@ import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";
 import geoData from "../assets/vestkystruten.json";
 
-const initialMap = ref(null);
-const addMarkers = (map, data) => {
+const initialMap = ref<L.Map | null>(null);
+
+const addMarkers = (map: L.Map, data: any) => {
   Object.keys(data).forEach((key) => {
     const item = data[key];
     if (item.coordinates.length === 2) {
@@ -19,7 +20,7 @@ const addMarkers = (map, data) => {
       circle.bindPopup(item.popup);
     } else {
       // Add polyline
-      const polyline = L.polyline(item.coordinates, item.options).addTo(map);
+      L.polyline(item.coordinates, item.options).addTo(map);
     }
   });
 };
@@ -36,5 +37,9 @@ onMounted(() => {
   addMarkers(initialMap.value, geoData);
 });
 </script>
-<template><div class="map" id="vestkystruten-map"></div></template>
+
+<template>
+  <div class="map" id="vestkystruten-map"></div>
+</template>
+
 <style lang="css" scoped></style>
