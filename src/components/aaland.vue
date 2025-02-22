@@ -11,7 +11,7 @@ const addMarkers = (map: L.Map, data: any) => {
     const item = data[key];
     if (item.coordinates.length === 2) {
       // Add circle
-      const circle = L.circle(item.coordinates, {
+      const circle = L.circle(item.coordinates as [number, number], {
         color: "black",
         fillColor: "black",
         fillOpacity: 0.5,

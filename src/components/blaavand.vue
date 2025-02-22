@@ -19,12 +19,15 @@ onMounted(() => {
   }).addTo(initialMap.value);
 
   // Add Godby circle
-  const lighthouse = L.circle(geoData.lighthouse.coordinates, {
-    color: "black",
-    fillColor: "black",
-    fillOpacity: 0.5,
-    radius: geoData.lighthouse.radius,
-  }).addTo(initialMap.value);
+  const lighthouse = L.circle(
+    geoData.lighthouse.coordinates as [number, number],
+    {
+      color: "black",
+      fillColor: "black",
+      fillOpacity: 0.5,
+      radius: geoData.lighthouse.radius,
+    }
+  ).addTo(initialMap.value);
   lighthouse.bindPopup(geoData.lighthouse.popup);
 });
 </script>
