@@ -1,25 +1,32 @@
 <template>
   <section>
     <div class="banner">
-      <img
-        src="https://www.thunderforest.com/images/sets/interlaken-636.png"
-        alt="Banner showcasing Slavic Media Lightroom Presets"
-      />
+      <div class="filter"></div>
+      <img src="../assets/map.svg" />
       <div class="title flex-center">
         <h1>Maps</h1>
         <div class="stack">
-          <span class="fa-brands fa-js"></span
-          ><span class="fa-brands fa-vuejs"></span>
-          <span class="fa-brands fa-docker"></span>
-          <span class="fa-brands fa-css3"></span>
-          <span class="fa-brands fa-html5"></span>
+          <Button
+            as="a"
+            target="_blank"
+            rel="noopener"
+            href="https://vuejs.org"
+            variant="outlined"
+            icon="fa-brands fa-vuejs"
+          ></Button>
+          <Button
+            as="a"
+            target="_blank"
+            rel="noopener"
+            href="https://docker.com"
+            variant="outlined"
+            icon="fa-brands fa-docker"
+          ></Button>
         </div>
         <Button
-          severity="primary"
-          icon="pi pi-star-fill"
+          icon="pi pi-github"
           variant="outlined"
-          rounded
-          label="Give a star"
+          label="GitHub"
           as="a"
           href="https://github.com/adamsochorec/maps"
           target="_blank"
@@ -32,13 +39,11 @@
 
 <style scoped>
 .banner {
-  height: 240px;
+  height: 50vh;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   width: 100vw;
-  backdrop-filter: var(--blur-1) !important; /* Standard syntax */
-  -webkit-backdrop-filter: var(--blur-1) !important; /* Chrome, Safari, Opera */
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
@@ -69,28 +74,16 @@ h1 {
   display: flex;
   grid-gap: var(--grid-gap-2);
 }
-.stack span {
-  font-size: var(--font-size-5);
-}
 img {
   position: relative;
   display: block;
+  opacity: 0.9;
   width: 100%;
-  -webkit-filter: blur(50px);
-  filter: blur(50px);
 }
 .title {
   position: absolute;
   text-align: center;
   margin-bottom: var(--grid-gap-2);
   padding: var(--grid-gap-2);
-}
-@media only screen and (max-width: 500px) {
-  p {
-    font-size: var(--font-size-8);
-  }
-  .banner {
-    height: var(--dimension-2);
-  }
 }
 </style>

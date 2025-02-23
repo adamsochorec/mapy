@@ -58,14 +58,9 @@ onMounted(() => {
     props.mapData.zoom
   );
 
-  L.tileLayer(
-    `https://tile.thunderforest.com/${props.mapData.map}/{z}/{x}/{y}.png?apikey=7530a0f24d13406081285d989b4b17e5`,
-    {
-      maxZoom: 19,
-      attribution:
-        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    }
-  ).addTo(initialMap.value);
+  L.tileLayer(`https://tile.openstreetmap.org/{z}/{x}/{y}.png`, {
+    maxZoom: 19,
+  }).addTo(initialMap.value);
 
   addMarkers(initialMap.value, props.mapData);
 });
