@@ -1,96 +1,35 @@
 <script setup lang="ts">
-import Aaland from "@/components/aaland.vue";
-import Blaavand from "@/components/blaavand.vue";
-import Vasterbotten from "@/components/vasterbotten.vue";
-import Vestkystruten from "@/components/vestkystruten.vue";
+import Map from "@/components/map.vue";
 import CountryFlag from "vue-country-flag-next";
+import geoData from "@/assets/geoData.json";
 </script>
 
 <template>
   <div
     style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 1rem"
   >
-    <Card style="width: 25rem; overflow: hidden">
+    <Card
+      v-for="(mapData, index) in geoData"
+      :key="index"
+      style="width: 25rem; overflow: hidden"
+    >
       <template #header>
-        <Aaland></Aaland>
+        <Map :mapData="mapData"></Map>
       </template>
-      <template #title>Expedition Åland</template>
-      <template #subtitle>
-        <CountryFlag country="ax" size="small" />
-      </template>
+      <template #title>
+        <CountryFlag
+          :country="mapData.country"
+          class="flag"
+          size="normal"
+          style="vertical-align: baseline"
+        />
+        <span style="margin-left: var(--grid-gap-2)">{{
+          mapData.title
+        }}</span></template
+      >
       <template #content>
         <p class="m-0">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
-          sed consequuntur error repudiandae numquam deserunt quisquam repellat
-          libero asperiores earum nam nobis, culpa ratione quam perferendis
-          esse, cupiditate neque quas!
-        </p>
-      </template>
-      <template #footer
-        ><Button
-          icon="pi pi-info-circle"
-          severity="primary"
-          label="Learn more"
-        ></Button>
-      </template>
-    </Card>
-    <Card style="width: 25rem; overflow: hidden">
-      <template #header> <Blaavand></Blaavand> </template>
-      <template #title>Blåvand</template>
-      <template #subtitle>
-        <CountryFlag country="dk" size="small" />
-      </template>
-      <template #content>
-        <p class="m-0">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
-          sed consequuntur error repudiandae numquam deserunt quisquam repellat
-          libero asperiores earum nam nobis, culpa ratione quam perferendis
-          esse, cupiditate neque quas!
-        </p>
-      </template>
-      <template #footer
-        ><Button
-          icon="pi pi-info-circle"
-          severity="primary"
-          label="Learn more"
-        ></Button>
-      </template>
-    </Card>
-    <Card style="width: 25rem; overflow: hidden">
-      <template #header> <Vasterbotten></Vasterbotten> </template>
-      <template #title>Västerbotten</template>
-      <template #subtitle>
-        <CountryFlag country="se" size="small" />
-      </template>
-      <template #content>
-        <p class="m-0">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
-          sed consequuntur error repudiandae numquam deserunt quisquam repellat
-          libero asperiores earum nam nobis, culpa ratione quam perferendis
-          esse, cupiditate neque quas!
-        </p>
-      </template>
-      <template #footer
-        ><Button
-          icon="pi pi-info-circle"
-          severity="primary"
-          label="Learn more"
-        ></Button>
-      </template>
-    </Card>
-
-    <Card style="width: 25rem; overflow: hidden">
-      <template #header> <Vestkystruten></Vestkystruten></template>
-      <template #title>Expedition Denmark</template>
-      <template #subtitle>
-        <CountryFlag country="dk" size="small" />
-      </template>
-      <template #content>
-        <p class="m-0">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
-          sed consequuntur error repudiandae numquam deserunt quisquam repellat
-          libero asperiores earum nam nobis, culpa ratione quam perferendis
-          esse, cupiditate neque quas!
+          {{ mapData.desc }}
         </p>
       </template>
       <template #footer
@@ -105,10 +44,7 @@ import CountryFlag from "vue-country-flag-next";
 </template>
 <style scoped>
 .map {
-  height: 200px;
+  height: 300px;
   width: 100%;
-}
-.Card {
-  margin: 1rem 0;
 }
 </style>
