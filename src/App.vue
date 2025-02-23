@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import Map from "./components/swiper-map.vue";
+import Map from "@/components/swiper-map.vue";
+import Intro from "@/components/intro.vue";
 </script>
 
 <template>
   <main>
+    <Intro></Intro>
     <Map></Map>
   </main>
 </template>

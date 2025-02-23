@@ -19,8 +19,15 @@ const addMarkers = (map: L.Map, data: any) => {
       }).addTo(map);
       circle.bindPopup(item.popup);
     } else {
+      const polylineOptions = {
+        color: item.options.color || "black",
+        dashArray: item.options.dashArray || "1,7",
+      };
       // Add polyline
-      L.polyline(item.coordinates, item.options).addTo(map);
+      const polyline = L.polyline(item.coordinates, polylineOptions).addTo(map);
+      if (item.popup) {
+        polyline.bindPopup(item.popup);
+      }
     }
   });
 };

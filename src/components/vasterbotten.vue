@@ -19,10 +19,14 @@ const addMarkers = (map: L.Map, data: any) => {
       }).addTo(map);
       circle.bindPopup(item.popup);
     } else {
+      const polylineOptions = {
+        color: item.options.color || "black",
+        dashArray: "1, 5",
+      };
       // Add polyline
-      const polyline = L.polyline(item.coordinates, item.options).addTo(map);
-      if (item.options.popup) {
-        polyline.bindPopup(item.options.popup);
+      const polyline = L.polyline(item.coordinates, polylineOptions).addTo(map);
+      if (item.popup) {
+        polyline.bindPopup(item.popup);
       }
     }
   });

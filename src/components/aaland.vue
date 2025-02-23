@@ -19,20 +19,31 @@ const addMarkers = (map: L.Map, data: any) => {
       }).addTo(map);
       circle.bindPopup(item.popup);
     } else {
+      const polylineOptions = {
+        color: item.options.color || "black",
+        dashArray: item.options.dashArray || "1,7",
+      };
       // Add polyline
-      L.polyline(item.coordinates, item.options).addTo(map);
+      const polyline = L.polyline(item.coordinates, polylineOptions).addTo(map);
+      if (item.popup) {
+        polyline.bindPopup(item.popup);
+      }
     }
   });
 };
 
 onMounted(() => {
-  initialMap.value = L.map("aaland-map").setView([60.22776, 19.88992], 8.5);
+  const mapData = geoData.aaland;
+  initialMap.value = L.map("aaland-map").setView(mapData.setView, mapData.zoom);
 
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution:
-      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(initialMap.value);
+  L.tileLayer(
+    `https://tile.thunderforest.com/${mapData.map}/{z}/{x}/{y}.png?apikey=7530a0f24d13406081285d989b4b17e5`,
+    {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }
+  ).addTo(initialMap.value);
 
   addMarkers(initialMap.value, geoData);
 });

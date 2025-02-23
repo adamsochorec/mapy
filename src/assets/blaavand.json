@@ -1,12 +1,19 @@
 {
-  "lighthouse": {
-    "coordinates": [55.55781, 8.08323],
-    "radius": 400,
-    "popup": "Blåvand Lighthouse"
-  },
-  "tirpitz": {
-    "coordinates": [55.5504, 8.17224],
-    "radius": 400,
-    "popup": "Blåvand Lighthouse"
+  "blaavand": {
+    "map": "transport",
+    "setView": [55.55781, 8.25],
+    "zoom": 11,
+    "marker": [
+      {
+        "coordinates": [55.55781, 8.08323],
+        "radius": 400,
+        "popup": "Blåvand Lighthouse"
+      },
+      {
+        "coordinates": [55.5504, 8.17224],
+        "radius": 400,
+        "popup": "Blåvand Lighthouse"
+      }
+    ]
   }
 }
