@@ -7,11 +7,7 @@ import { PrimeVueResolver } from "@primevue/auto-import-resolver";
 export default defineConfig({
   plugins: [
     vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: (tag) => tag === "lite-vimeo",
-        },
-      },
+      template: {},
     }),
     Components({
       resolvers: [PrimeVueResolver()],
@@ -23,14 +19,10 @@ export default defineConfig({
     },
   },
   css: {
-    postcss: "./postcss.config.js",
     preprocessorOptions: {
       css: {
         additionalData: `@import "./src/assets/style.css";`,
       },
     },
-  },
-  optimizeDeps: {
-    exclude: ["autoprefixer"],
   },
 });

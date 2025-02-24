@@ -5,7 +5,6 @@ import PrimeVue from "primevue/config";
 import PrimeVueTheme from "@primevue/themes/aura";
 import { definePreset } from "@primevue/themes";
 import "primeicons/primeicons.css";
-import CountryFlag from "vue-country-flag-next";
 
 const app = createApp(App);
 
@@ -32,8 +31,6 @@ app.use(PrimeVue, {
     preset: slavicmedia,
   },
 });
-
-app.component("CountryFlag", CountryFlag);
 
 app.use(PrimeVue);
 createApp(App).mount("#app");
