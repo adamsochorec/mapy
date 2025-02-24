@@ -12,6 +12,8 @@ declare module 'vue' {
     Card: typeof import('primevue/card')['default']
     Footer: typeof import('./src/components/footer.vue')['default']
     IconField: typeof import('primevue/iconfield')['default']
+    InputGroup: typeof import('primevue/inputgroup')['default']
+    InputGroupAddon: typeof import('primevue/inputgroupaddon')['default']
     InputIcon: typeof import('primevue/inputicon')['default']
     InputText: typeof import('primevue/inputtext')['default']
     Intro: typeof import('./src/components/intro.vue')['default']

@@ -1,12 +1,6 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import Index from "@/views/index.vue";
 import CountryFlag from "vue-country-flag-next";
-const toggle = (event) => {
-  op.value.toggle(event);
-};
-
-const op = ref();
 </script>
 <template>
   <main
@@ -55,25 +49,33 @@ const op = ref();
         <b class="gradient" style="font-size: var(--font-size-3)">Maps</b>
         <div>
           <Button
+            style="
+              background-color: var(--p-indigo-900);
+              color: white;
+              border: none;
+            "
             as="a"
             target="_blank"
             rel="noopener noreferrer nofollow"
             variant="text"
             href="https://vuejs.org"
-            size="large"
             icon="fa-brands fa-vuejs"
           ></Button>
           <Button
+            style="
+              background-color: var(--p-indigo-900);
+              margin: 0 var(--grid-gap-2);
+              color: white;
+              border: none;
+            "
             as="a"
             target="_blank"
             variant="text"
-            size="large"
             rel="noopener noreferrer nofollow"
             href="https://python.org"
             icon="fa-brands fa-python"
           ></Button>
           <Button
-            style="margin-left: var(--grid-gap-1)"
             icon="pi pi-github"
             label="GitHub"
             as="a"
@@ -87,40 +89,23 @@ const op = ref();
         </div>
       </nav>
     </header>
-    <aside
-      style="
-        position: absolute;
-        left: var(--grid-gap-2);
-        bottom: 3.5rem;
-        z-index: 99;
-        display: flex;
-        flex-direction: column;
-        gap: var(--grid-gap-1);
-      "
-    >
-      <Button icon="pi pi-info-circle" @click="toggle"></Button>
-      <Popover ref="op">sfdfdf</Popover>
-      <Button icon="pi pi-map"></Button>
-    </aside>
+
     <!--  HEADER END -->
     <Index></Index>
     <!-- FOOTER START -->
     <footer
       style="
-        position: absolute;
+        position: relative;
         bottom: 0;
         left: 0;
-        z-index: 9;
-        height: 5vh;
-        min-height: 40px;
-        background-color: var(--p-indigo-950);
-        backdrop-filter: var(--blur-1);
+        height: auto;
+        color: var(--p-indigo-900);
+        z-index: 99;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         font-size: var(--font-size-7);
-        text-align: center;
       "
     >
       <span
@@ -154,5 +139,8 @@ const op = ref();
   color: white;
   outline: 1px solid transparent;
   border: 1px solid transparent;
+  -webkit-animation: gradientAnimation 3s ease infinite;
+  animation: gradientAnimation 3s ease infinite;
+  background-size: 400% 400%;
 }
 </style>

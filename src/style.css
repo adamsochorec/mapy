@@ -5,7 +5,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   color-scheme: light dark;
-  background-color: black;
+  background-color: white;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -61,3 +61,9 @@ a {
   }
 }
 /* GRADIENT END */
+
+/* SWIPER START */
+.swiper .swiper-pagination-bullet-active {
+  background-color: var(--p-indigo-800);
+}
+/* SWIPER END */
