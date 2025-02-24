@@ -18,6 +18,14 @@
             as="a"
             target="_blank"
             rel="noopener"
+            href="https://python.org"
+            variant="outlined"
+            icon="fa-brands fa-python"
+          ></Button>
+          <Button
+            as="a"
+            target="_blank"
+            rel="noopener"
             href="https://docker.com"
             variant="outlined"
             icon="fa-brands fa-docker"

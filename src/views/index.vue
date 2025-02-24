@@ -64,7 +64,16 @@ $(document).ready(function () {
             class="popup-with-form"
             href="#lightbox"
           ></Button>
-          <Button icon="fa-brands fa-strava" variant="text" raised />
+          <Button
+            v-if="mapData.strava"
+            as="a"
+            :href="mapData.strava"
+            target="_blank"
+            rel="noopener"
+            icon="fa-brands fa-strava"
+            variant="text"
+            raised
+          />
         </div>
         <!-- <Map id="lightbox" class="white-popup-block mfp-hide"></Map> -->
       </template>
