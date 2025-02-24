@@ -6,6 +6,55 @@ import geoData from "@/assets/geoData.json";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
+const items = [
+  {
+    label: "OpenCycleMap",
+    value: "cycle",
+  },
+  {
+    label: "Transport",
+    value: "transport",
+  },
+  {
+    label: "Landscape",
+    value: "landscape",
+  },
+  {
+    label: "Outdoors",
+    value: "outdoors",
+  },
+  {
+    label: "Transport Dark",
+    value: "transport-dark",
+  },
+  {
+    label: "Spinal Map",
+    value: "spinal-map",
+  },
+  {
+    label: "Pioneer",
+    value: "pioneer",
+  },
+  {
+    label: "Mobile Atlas",
+    value: "mobile-atlas",
+  },
+  {
+    label: "Neighbourhood",
+    value: "neighbourhood",
+  },
+  {
+    label: "Atlas",
+    value: "Atlas",
+  },
+  {
+    separator: true,
+  },
+  {
+    label: "Default",
+  },
+];
+
 const op = ref();
 const toggle = (event) => {
   op.value.toggle(event);
@@ -29,16 +78,17 @@ onMounted(() => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    allowTouchMove: false, // Disable dragability
   });
 });
 </script>
 
 <template>
-  <aside
+  <!-- <aside
     style="
       position: absolute;
       right: var(--grid-gap-2);
-      bottom: 3.5rem;
+      bottom: var(--grid-gap-3);
       z-index: 99;
       display: flex;
       flex-direction: column;
@@ -77,13 +127,14 @@ onMounted(() => {
         />
       </div>
     </Popover>
-    <Button
-      style="background-color: var(--p-indigo-900); color: white; border: none"
+    <SplitButton
       icon="pi pi-map"
-    ></Button>
-  </aside>
+      :model="items"
+      style="background-color: var(--p-indigo-900); color: white; border: none"
+    />
+  </aside> -->
   <!-- Slider main container -->
-  <div class="swiper" style="width: 100%; height: 97vh">
+  <div class="swiper" style="width: 100%; height: 100vh">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->

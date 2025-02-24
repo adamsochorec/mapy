@@ -25,7 +25,13 @@ a {
   text-decoration: none !important;
   cursor: pointer;
 }
-
+a,
+a:hover {
+  transition: var(--transition-1);
+}
+.icon:hover {
+  color: white !important;
+}
 /* GRADIENT START */
 .gradient {
   background: -o-linear-gradient(38deg, var(--p-indigo-800), var(--p-rose-500));
@@ -64,6 +70,6 @@ a {
 
 /* SWIPER START */
 .swiper .swiper-pagination-bullet-active {
-  background-color: var(--p-indigo-800);
+  background-color: var(--p-indigo-900);
 }
 /* SWIPER END */
