@@ -8,20 +8,16 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Aaland: typeof import('./src/components/aaland.vue')['default']
-    Blaavand: typeof import('./src/components/blaavand.vue')['default']
     Button: typeof import('primevue/button')['default']
     Card: typeof import('primevue/card')['default']
-    Components: typeof import('./src/components/index.vue')['default']
-    copy: typeof import('./src/components/aaland copy.vue')['default']
-    Dialog: typeof import('./src/components/dialog.vue')['default']
     Footer: typeof import('./src/components/footer.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    IconField: typeof import('primevue/iconfield')['default']
+    InputIcon: typeof import('primevue/inputicon')['default']
     InputText: typeof import('primevue/inputtext')['default']
     Intro: typeof import('./src/components/intro.vue')['default']
     Map: typeof import('./src/components/map.vue')['default']
-    SwiperMap: typeof import('./src/components/swiper-map.vue')['default']
-    Vasterbotten: typeof import('./src/components/vasterbotten.vue')['default']
-    Vestkystruten: typeof import('./src/components/vestkystruten.vue')['default']
+    Popover: typeof import('primevue/popover')['default']
+    SplitButton: typeof import('primevue/splitbutton')['default']
+    Toolbar: typeof import('primevue/toolbar')['default']
   }
 }
