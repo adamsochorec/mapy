@@ -17,25 +17,15 @@
   margin: 0;
   scroll-behavior: smooth;
 }
-a :not(footer a) {
-  text-decoration: none !important;
-  cursor: pointer;
-}
 a {
   text-decoration: none !important;
   cursor: pointer;
 }
-a,
-a:hover {
-  transition: var(--transition-1);
-}
-.icon:hover {
-  color: white !important;
-}
+
 /* GRADIENT START */
 .gradient {
-  background: -o-linear-gradient(38deg, var(--p-indigo-800), var(--p-rose-500));
-  background: linear-gradient(52deg, var(--p-indigo-800), var(--p-rose-500));
+  background: -o-linear-gradient(38deg, var(--p-indigo-950), var(--p-rose-500));
+  background: linear-gradient(52deg, var(--p-indigo-950), var(--p-rose-500));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -70,6 +60,15 @@ a:hover {
 
 /* SWIPER START */
 .swiper .swiper-pagination-bullet-active {
-  background-color: var(--p-indigo-900);
+  background-color: var(--p-indigo-950);
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--p-indigo-950);
 }
 /* SWIPER END */
+@media only screen and (max-width: 667px) {
+  .swiper .swiper-pagination {
+    margin-bottom: var(--grid-gap-3);
+  }
+}

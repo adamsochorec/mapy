@@ -52,16 +52,21 @@ const addMarkers = (map: L.Map, data: any) => {
 };
 
 onMounted(() => {
-  initialMap.value = L.map(props.mapData.id).setView(
-    props.mapData.setView,
-    props.mapData.zoom
-  );
+  initialMap.value = L.map(props.mapData.id, {
+    zoomControl: false,
+  }).setView(props.mapData.setView, props.mapData.zoom);
 
   L.tileLayer(`https://tile.openstreetmap.org/{z}/{x}/{y}.png`, {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 19,
   }).addTo(initialMap.value);
+
+  L.control
+    .zoom({
+      position: "bottomright",
+    })
+    .addTo(initialMap.value);
 
   addMarkers(initialMap.value, props.mapData);
 });
@@ -80,5 +85,3 @@ watch(
 <template>
   <div class="map" :id="props.mapData.id"></div>
 </template>
-
-<style lang="css" scoped></style>

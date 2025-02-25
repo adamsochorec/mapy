@@ -25,35 +25,24 @@
       "
     >
       <div style="display: flex; align-items: center">
-        <img
-          src="../assets/favicon.png"
-          width="30px"
-          style="margin-right: var(--grid-gap-1); aspect-ratio: 1/1"
-        />
         <b class="gradient" style="font-size: var(--font-size-4)">Maps</b>
       </div>
       <div>
         <a
-          style="color: var(--p-indigo-900)"
+          style="color: var(--p-indigo-950)"
           size="large"
           target="_blank"
           rel="noopener noreferrer nofollow"
-          variant="text"
           href="https://vuejs.org"
           class="fa-brands fa-vuejs icon"
         ></a>
         <a
-          style="
-            color: var(--p-indigo-900);
-
-            margin: 0 var(--grid-gap-1);
-          "
+          style="color: var(--p-indigo-950); margin: 0 var(--grid-gap-1)"
           size="large"
           target="_blank"
-          variant="text"
           rel="noopener noreferrer nofollow"
           href="https://python.org"
-          class="fa-brands fa-python icon"
+          class="fa-brands fa-python"
         ></a>
         <Button
           icon="pi pi-github"
@@ -72,8 +61,8 @@
 </template>
 <style scoped>
 .cta {
-  background: -o-linear-gradient(38deg, var(--p-indigo-800), var(--p-rose-500));
-  background: linear-gradient(52deg, var(--p-indigo-800), var(--p-rose-500));
+  background: -o-linear-gradient(38deg, var(--p-indigo-950), var(--p-rose-800));
+  background: linear-gradient(52deg, var(--p-indigo-950), var(--p-rose-800));
   -webkit-animation: gradientAnimation 3s ease infinite;
   animation: gradientAnimation 3s ease infinite;
   color: white;
@@ -85,16 +74,16 @@
 }
 .cta:hover {
   background: transparent !important;
-  border: 1px solid var(--p-indigo-900) !important;
+  border: 1px solid var(--p-indigo-950) !important;
   background: -o-linear-gradient(
     38deg,
-    var(--p-indigo-800),
-    var(--p-rose-500)
+    var(--p-indigo-950),
+    var(--p-rose-800)
   ) !important;
   background: linear-gradient(
     52deg,
-    var(--p-indigo-800),
-    var(--p-rose-500)
+    var(--p-indigo-950),
+    var(--p-rose-800)
   ) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;

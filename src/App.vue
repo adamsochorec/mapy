@@ -17,7 +17,6 @@ import Header from "@/components/header.vue";
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        font-family: var(--content-font);
         overflow: hidden;
       "
     >

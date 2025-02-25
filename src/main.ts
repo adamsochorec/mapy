@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
 import PrimeVue from "primevue/config";
-import PrimeVueTheme from "@primevue/themes/aura";
+import PrimeVueTheme from "@primevue/themes/nora";
 import { definePreset } from "@primevue/themes";
 import "primeicons/primeicons.css";
 
@@ -29,6 +29,9 @@ const slavicmedia = definePreset(PrimeVueTheme, {
 app.use(PrimeVue, {
   theme: {
     preset: slavicmedia,
+  },
+  options: {
+    darkModeSelector: false || "none",
   },
 });
 

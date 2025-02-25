@@ -27,8 +27,9 @@
   </footer>
 </template>
 <style scoped>
-.separator::after {
-  content: "|";
-  margin: 0 var(--grid-gap-1);
+@media only screen and (max-width: 400px) {
+  footer {
+    display: none;
+  }
 }
 </style>
