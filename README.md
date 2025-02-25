@@ -1,5 +1,9 @@
-# Vue 3 + TypeScript + Vite
+# Maps
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This project accommodates thousands of coordinates I collected over the years with [Strava](https://strava.com). Bike trips, skiing or hiking activities were recorded into a gpx file and then compiled into JSON data arrays through Python. 
+Strava still offers more comprehensive features, such as altitude tracking, time, average speeds etc. Still, I wanted to play around with different visual styles of [Leaflet](https://leafletjs.com) and [Thunderforest](https://thunderforest.com) API maps and mark my waypoints and routes.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+```bash
+$ npm install
+$ npm run dev # serve examples at localhost:5173
+```
