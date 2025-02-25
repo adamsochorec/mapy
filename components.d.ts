@@ -9,20 +9,8 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Button: typeof import('primevue/button')['default']
-    Card: typeof import('primevue/card')['default']
-    Chip: typeof import('primevue/chip')['default']
     Footer: typeof import('./src/components/footer.vue')['default']
     Header: typeof import('./src/components/header.vue')['default']
-    IconField: typeof import('primevue/iconfield')['default']
-    InputGroup: typeof import('primevue/inputgroup')['default']
-    InputGroupAddon: typeof import('primevue/inputgroupaddon')['default']
-    InputIcon: typeof import('primevue/inputicon')['default']
-    InputText: typeof import('primevue/inputtext')['default']
-    Intro: typeof import('./src/components/intro.vue')['default']
     Map: typeof import('./src/components/map.vue')['default']
-    Popover: typeof import('primevue/popover')['default']
-    SplitButton: typeof import('primevue/splitbutton')['default']
-    Tag: typeof import('primevue/tag')['default']
-    Toolbar: typeof import('primevue/toolbar')['default']
   }
 }

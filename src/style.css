@@ -64,7 +64,7 @@ a {
 }
 .swiper-button-prev,
 .swiper-button-next {
-  color: var(--p-indigo-950);
+  color: var(--p-indigo-950) !important;
 }
 /* SWIPER END */
 @media only screen and (max-width: 667px) {
