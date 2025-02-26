@@ -6,60 +6,7 @@ import geoData from "@/assets/geoData.json";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import { useArrowNavigation } from "@/functions/arrow-navigation";
-/* 
-const items = [
-  {
-    label: "OpenCycleMap",
-    value: "cycle",
-  },
-  {
-    label: "Transport",
-    value: "transport",
-  },
-  {
-    label: "Landscape",
-    value: "landscape",
-  },
-  {
-    label: "Outdoors",
-    value: "outdoors",
-  },
-  {
-    label: "Transport Dark",
-    value: "transport-dark",
-  },
-  {
-    label: "Spinal Map",
-    value: "spinal-map",
-  },
-  {
-    label: "Pioneer",
-    value: "pioneer",
-  },
-  {
-    label: "Mobile Atlas",
-    value: "mobile-atlas",
-  },
-  {
-    label: "Neighbourhood",
-    value: "neighbourhood",
-  },
-  {
-    label: "Atlas",
-    value: "Atlas",
-  },
-  {
-    separator: true,
-  },
-  {
-    label: "Default",
-  },
-];
 
-const op = ref();
-const toggle = (event) => {
-  op.value.toggle(event);
-}; */
 onMounted(() => {
   const swiper = new Swiper(".swiper", {
     // Optional parameters
@@ -96,7 +43,8 @@ onMounted(() => {
         v-for="(mapData, index) in geoData"
         :key="index"
       >
-        <aside
+        <div
+          class="specs-desktop"
           v-if="mapData"
           style="
             position: absolute;
@@ -138,9 +86,9 @@ onMounted(() => {
               margin-top: var(--grid-gap-1);
             "
           />
-        </aside>
+        </div>
         <Button
-          class="strava-mobile"
+          class="specs-mobile"
           v-if="mapData.strava"
           as="a"
           :href="mapData.strava"
@@ -159,6 +107,7 @@ onMounted(() => {
             z-index: 999;
           "
         />
+
         <Map :mapData="mapData" style="height: 100%; width: 100%"></Map>
       </div>
     </div>
@@ -169,12 +118,12 @@ onMounted(() => {
 </template>
 <style scoped>
 @media only screen and (min-width: 667px) {
-  .strava-mobile {
+  .specs-mobile {
     display: none;
   }
 }
 @media only screen and (max-width: 667px) {
-  aside {
+  .specs-desktop {
     display: none;
   }
 }

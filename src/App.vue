@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import Index from "@/views/index.vue";
 import Footer from "@/components/footer.vue";
 import Header from "@/components/header.vue";
+/* import MapSwitch from "@/components/map-switch.vue";
+ */
 </script>
 <template>
   <body>
@@ -23,6 +26,8 @@ import Header from "@/components/header.vue";
       <!--  HEADER START -->
       <Header></Header>
       <!--  HEADER END -->
+      <!--       <MapSwitch></MapSwitch>
+ -->
       <Index></Index>
       <!-- FOOTER START -->
       <Footer></Footer>
