@@ -139,6 +139,26 @@ onMounted(() => {
             "
           />
         </aside>
+        <Button
+          class="strava-mobile"
+          v-if="mapData.strava"
+          as="a"
+          :href="mapData.strava"
+          target="_blank"
+          label="Full route"
+          rel="noopener noreferrer nofollow"
+          icon="fa-brands fa-strava"
+          severity="primary"
+          style="
+            background-color: var(--p-indigo-950);
+            color: white;
+            border: none;
+            position: absolute;
+            bottom: var(--grid-gap-3);
+            left: var(--grid-gap-3);
+            z-index: 999;
+          "
+        />
         <Map :mapData="mapData" style="height: 100%; width: 100%"></Map>
       </div>
     </div>
@@ -147,3 +167,15 @@ onMounted(() => {
     <div class="swiper-button-next"></div>
   </div>
 </template>
+<style scoped>
+@media only screen and (min-width: 667px) {
+  .strava-mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 667px) {
+  aside {
+    display: none;
+  }
+}
+</style>
