@@ -13,6 +13,5 @@ declare module 'vue' {
     Header: typeof import('./src/components/header.vue')['default']
     Map: typeof import('./src/components/map.vue')['default']
     MapSwitch: typeof import('./src/components/map-switch.vue')['default']
-    RadioButton: typeof import('primevue/radiobutton')['default']
   }
 }
