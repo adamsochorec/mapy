@@ -10,6 +10,19 @@
     "start": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx --fix --ignore-path .gitignore"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamsochorec/maps"
+  },
+  "keywords": [
+    "vue",
+    "nodejs",
+    "javascript",
+    "vite",
+    "primevue",
+    "typescript",
+    "gpx"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
