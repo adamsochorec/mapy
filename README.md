@@ -1,5 +1,5 @@
 # Maps
-
+![Deployed](https://img.shields.io/badge/status-deployed-brightgreen)
 ## Who?
 The UI was developed by [Adam Sochorec](https://www.linkedin.com/in/adamsochorec) in February 2022, and data collection began in 2021.
 
