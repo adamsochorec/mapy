@@ -1,6 +1,6 @@
 # Maps
 
-[![Deploy to GitHub Pages](https://github.com/adamsochorec/maps/actions/workflows/deploy.yml/badge.svg?event=deployment)](https://github.com/adamsochorec/maps/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/adamsochorec/maps/actions/workflows/deploy.yml/badge.svg)](https://github.com/adamsochorec/maps/actions/workflows/deploy.yml)
 
 ## Who?
 
