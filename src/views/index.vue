@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import Map from "@/components/map.vue";
+import Map from "@/components/Map.vue";
 import CountryFlag from "vue-country-flag-next";
 import geoData from "@/assets/geoData.json";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import { useArrowNavigation } from "@/functions/arrow-navigation";
+import { useArrowNavigation } from "@/composables/useArrowNavigation";
 
 onMounted(() => {
   const swiper = new Swiper(".swiper", {

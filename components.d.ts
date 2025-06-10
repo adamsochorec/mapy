@@ -12,6 +12,6 @@ declare module 'vue' {
     Footer: typeof import('./src/components/footer.vue')['default']
     Header: typeof import('./src/components/header.vue')['default']
     Map: typeof import('./src/components/map.vue')['default']
-    MapSwitch: typeof import('./src/components/map-switch.vue')['default']
+    MapSwitch: typeof import('./src/components/MapSwitch.vue')['default']
   }
 }
