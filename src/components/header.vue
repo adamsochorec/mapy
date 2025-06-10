@@ -25,7 +25,7 @@
       "
     >
       <div style="display: flex; align-items: center">
-        <b class="gradient" style="font-size: var(--font-size-4)">Maps</b>
+        <b class="gradient" style="font-size: var(--font-size-4)">Mapy</b>
       </div>
       <div>
         <a
@@ -50,7 +50,7 @@
           as="a"
           rounded
           size="small"
-          href="https://github.com/adamsochorec/maps"
+          href="https://github.com/adamsochorec/mapy"
           target="_blank"
           rel="noopener noreferrer nofollow"
           class="cta"
