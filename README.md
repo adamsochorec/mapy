@@ -26,9 +26,9 @@ Built as a simple Vue.js and TypeScript application using [PrimeVue](https://www
 
 ```sh
 cd frontend
-npm install ## Install Node
-npm run dev ## Compile and Hot-Reload for Development
-npm run build ## Type-Check, Compile and Minify for Production
+npm install # Install Node
+npm run dev # Compile and Hot-Reload for Development
+npm run build # Type-Check, Compile and Minify for Production
 ```
 
 ## Project Deployment
