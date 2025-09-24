@@ -24,13 +24,13 @@ import Header from "@/components/Header.vue";
       "
     >
       <!--  HEADER START -->
-      <Header></Header>
+      <Header />
       <!--  HEADER END -->
       <!--       <MapSwitch></MapSwitch>
  -->
-      <Index></Index>
+      <Index />
       <!-- FOOTER START -->
-      <Footer></Footer>
+      <Footer />
       <!-- FOOTER END -->
     </main>
   </body>
