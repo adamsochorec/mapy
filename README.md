@@ -16,7 +16,7 @@ Data has been collected since 2021, and the UI was developed in February 2022.
 
 ## What?
 
-A personal mapping project that integrates Strava-recorded routes with custom open-source maps. The project allows for better segmentation of trips, marking of significant waypoints, and improved visualization. Each route includes links to original Strava posts for further insights.
+A personal mapping project that integrates Strava-recorded routes with custom open-source maps. The project allows for better segmentation of trips, marking of significant waypoints, and improved visualisation. Each route includes links to original Strava posts for further insights.
 
 ## How?
 
@@ -29,13 +29,4 @@ cd frontend
 npm install # Install Node
 npm run dev # Compile and Hot-Reload for Development
 npm run build # Type-Check, Compile and Minify for Production
-```
-
-## Project Deployment
-
-```sh
-npm run build
-git add dist -f
-git commit -m "adding dist"
-git subtree push --prefix dist origin gh-pages
 ```
