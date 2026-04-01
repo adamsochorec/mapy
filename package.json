@@ -29,7 +29,7 @@
     "leaflet": "^1.9.4",
     "leaflet-polylinedecorator": "^1.6.0",
     "leaflet.markercluster": "^1.5.3",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "primeicons": "^7.0.0",
     "primevue": "^4.2.5",
     "swiper": "^12.1.2",
